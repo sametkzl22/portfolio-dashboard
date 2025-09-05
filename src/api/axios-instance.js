@@ -1,6 +1,13 @@
 import axios from 'axios'
 
-const api = axios.create({ timeout: 15000 })
+const api = axios.create({
+    baseURL: 'https://api.coingecko.com',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+   timeout: 15000 
+  })
 
 api.interceptors.response.use(
   (res) => res,

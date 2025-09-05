@@ -1,11 +1,10 @@
 <template>
-  <div class="bg-cyan-300 text-gray-600 py-3.5 px-15 shadow md:flex justify-between items-center ">
-Sidebar
-  </div>
-  </template>
-
-  <script>
-  export default {
-
-  }
-</script>
+  <aside class="hidden md:block border-r bg-white/70 backdrop-blur p-4">
+    <div class="font-semibold mb-2">Menu</div>
+    <ul class="space-y-2 text-sm">
+      <li><RouterLink class="hover:underline" to="/">Weather</RouterLink></li>
+      <li><RouterLink class="hover:underline" to="/dashboard">Crypto Dashboard</RouterLink></li>
+      <li><RouterLink class="hover:underline" to="/about">Portfolio</RouterLink></li>
+    </ul>
+  </aside>
+</template>

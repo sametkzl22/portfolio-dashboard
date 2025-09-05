@@ -1,14 +1,26 @@
 <template>
-  <div>
-    <Header />   <!-- her sayfada görünen üst kısım -->
+  
+      
+    <div class="relative flex min-h-screen , bg-gray-400" >
+       <Sidebar /> 
+    </div>
     
-    <router-view />  <!-- aktif sayfanın içeriği burada açılır -->
+    <div class="flex-1"></div>
+
+    <div class="bg-white shadow">
+      
+      <Header/>
+
+    </div>
+      <!-- Sayfa içeriği -->
+      <main class="md:col-span-9 col-span-12">
+        <router-view />
+      </main>
     
-    <Footer />   <!-- her sayfada görünen alt kısım -->
-  </div>
 </template>
 
 <script setup>
-import Header from '@/components/layout/Header.vue'
-import Footer from '@/components/layout/Footer.vue'
+
+import Sidebar from '@/components/layout/Sidebar.vue'
+
 </script>
